@@ -1,0 +1,14 @@
+.text-pad{
+    margin-left: 5px;
+}
+
+.login-item{ 
+    background-image: url("/assets/img/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 91vh;
+}
+
+.contain{
+    margin-left: 40%; 
+}

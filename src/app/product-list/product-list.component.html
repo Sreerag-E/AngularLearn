@@ -1,0 +1,45 @@
+<div class="card">
+
+  <div class="card-header">{{pageTtile}}</div><br>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">Filter By : &emsp; <input type="text" [(ngModel)]='filterText'/></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+          <br> <h4>Filtered By:&emsp;{{filterText}}</h4></div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table" *ngIf='products && products.length'>
+      <thead>
+        <tr>
+          <th><button class="btn btn-secondary"
+            (click)='imageShow()'>{{showImage ? 'Hide':'Show'}} Image</button></th>
+          <th>Product</th>
+          <th>Code</th>
+          <th>Available</th>
+          <th>Rating</th>
+          <th>Price($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let prod of filtered_products'>
+          <td>
+            <img  *ngIf='showImage'
+             [src] ='prod.imageUrl'
+            [title]='prod.productName'
+            [style.width.px]= "imageWidth"
+            [style.margin.px]= "imageMargin"
+            > 
+          </td>
+          <td>{{prod.productName}}</td>
+          <td>{{prod.productCode | lowercase}}</td>
+          <td>{{prod.releaseDate}}</td>
+          <td>{{prod.Rating}}</td>
+          <td>{{prod.price | currency:'USD':'symbol':'1.1-2'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+
+
+
+<div class="login">
+  <div class="login-item logincontainer">
+  <form #myform="ngForm" (ngSubmit)="login(myform)" class="form contain">
+    <div class="form-field">
+        <h1>Login</h1>
+       
+      <input name="email" id="login-email" type="email" class="form-input text-pad" placeholder="username" required ngModel>
+    </div>
+
+    <div class="form-field"> 
+      <input name="password" id="login-password" type="password" class="form-input text-pad" placeholder="Password" required ngModel>
+    </div>
+
+    <div class="form-field">
+      <a [routerLink]="['/home']"> 
+          <input type="submit" value="login" class="btn btn-primary col-md-2"> 
+      </a>
+    </div>
+  </form>
+</div>
+
+</div>
