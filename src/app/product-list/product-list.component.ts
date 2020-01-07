@@ -32,7 +32,7 @@ export class ProductListComponent {
     {
       "productId":2,
       "productName": "Garden cart",
-      "productCode":"DCNH243",
+      "productCode":"DCNH-243",
       "price":32.333,
       "releaseDate":'Mar 28,2019',
       "imageUrl":"assets/img/cart.jpg",
@@ -41,7 +41,7 @@ export class ProductListComponent {
     {
       "productId":21,
       "productName": "Hammer",
-      "productCode":"DCNH113",
+      "productCode":"DCNH-113",
       "price":12,
       "releaseDate":'Jul 8,2019',
       "imageUrl":"assets/img/hammer.jpg",

@@ -17,9 +17,14 @@ export class LoginComponent implements OnInit {
  
   login(form: { value: any; email: string; password: string; }){
     console.log(form.value.email);
-    alert("inside login "+form.value.email);
-    alert("inside password "+form.value.password);
-    this.router.navigateByUrl('/product-list');
+   
+   this.router.navigateByUrl('/home').then(e => {
+    if (e) {
+      console.log("Navigation is successful!");
+    } else {
+      console.log("Navigation has failed!");
+    }
+  });
 
   }
 
